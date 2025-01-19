@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://yarsi-connect-alumni-backend.vercel.app/";
+const API_URL = "https://yarsi-connect-alumni-backend.vercel.app/api/v1";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -24,9 +24,9 @@ api.interceptors.response.use(
   }
 );
 
-// Fungsi Login
+// Login function
 export const login = (username, password) => {
-  return api.post("/auth/login", {
+  return api.post("/auth/login", { // Updated endpoint
     username,
     password,
   });
