@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:2000/api/v1";
+const API_URL = "https://yarsi-connect-alumni-backend.vercel.app/";
 
 const api = axios.create({
   baseURL: API_URL,
